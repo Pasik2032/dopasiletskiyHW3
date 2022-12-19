@@ -64,16 +64,13 @@
 		E3DE80632950B41D0016770A /* PW2 */ = {
 			isa = PBXGroup;
 			children = (
+				E3DE80862950EB020016770A /* Module */,
 				E3DE80832950B7F70016770A /* Extension */,
 				E3DE80642950B41D0016770A /* AppDelegate.swift */,
 				E3DE80662950B41D0016770A /* SceneDelegate.swift */,
 				E3DE806D2950B41E0016770A /* Assets.xcassets */,
 				E3DE806F2950B41E0016770A /* LaunchScreen.storyboard */,
 				E3DE80722950B41E0016770A /* Info.plist */,
-				E3DE807B2950B6E60016770A /* WelcomePresenter.swift */,
-				E3DE807C2950B6E60016770A /* WelcomeRouter.swift */,
-				E3DE807D2950B6E60016770A /* WelcomeViewController.swift */,
-				E3DE807E2950B6E60016770A /* WelcomeModuleConfigurator.swift */,
 			);
 			path = PW2;
 			sourceTree = "<group>";
@@ -84,6 +81,57 @@
 				E3DE80842950B8470016770A /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		E3DE80862950EB020016770A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE80872950EB080016770A /* Welcome */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		E3DE80872950EB080016770A /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE808B2950EB260016770A /* Configurator */,
+				E3DE808A2950EB1E0016770A /* Rouner */,
+				E3DE80892950EB180016770A /* View */,
+				E3DE80882950EB110016770A /* Presenter */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		E3DE80882950EB110016770A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE807B2950B6E60016770A /* WelcomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E3DE80892950EB180016770A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE807D2950B6E60016770A /* WelcomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E3DE808A2950EB1E0016770A /* Rouner */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE807C2950B6E60016770A /* WelcomeRouter.swift */,
+			);
+			path = Rouner;
+			sourceTree = "<group>";
+		};
+		E3DE808B2950EB260016770A /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE807E2950B6E60016770A /* WelcomeModuleConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
