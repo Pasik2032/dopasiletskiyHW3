@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E38B503C2950F23500C29954 /* NotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B502F2950F23500C29954 /* NotesPresenter.swift */; };
+		E38B503D2950F23500C29954 /* NoteSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50312950F23500C29954 /* NoteSection.swift */; };
+		E38B503E2950F23500C29954 /* ShortNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50322950F23500C29954 /* ShortNote.swift */; };
+		E38B503F2950F23500C29954 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50352950F23500C29954 /* NoteTableViewCell.swift */; };
+		E38B50402950F23500C29954 /* InputNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50362950F23500C29954 /* InputNoteTableViewCell.swift */; };
+		E38B50412950F23500C29954 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50372950F23500C29954 /* NotesViewController.swift */; };
+		E38B50422950F23500C29954 /* NotesModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50392950F23500C29954 /* NotesModuleConfigurator.swift */; };
+		E38B50432950F23500C29954 /* NotesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B503B2950F23500C29954 /* NotesRouter.swift */; };
+		E38B50452950F25B00C29954 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50442950F25B00C29954 /* UITableView+Extension.swift */; };
+		E38B50472950F27900C29954 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50462950F27900C29954 /* Array+Safe.swift */; };
+		E38B504A2950F32200C29954 /* WelcomeButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50492950F32200C29954 /* WelcomeButtonModel.swift */; };
 		E3DE80652950B41D0016770A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE80642950B41D0016770A /* AppDelegate.swift */; };
 		E3DE80672950B41D0016770A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE80662950B41D0016770A /* SceneDelegate.swift */; };
 		E3DE806E2950B41E0016770A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3DE806D2950B41E0016770A /* Assets.xcassets */; };
@@ -20,6 +31,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E38B502F2950F23500C29954 /* NotesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesPresenter.swift; sourceTree = "<group>"; };
+		E38B50312950F23500C29954 /* NoteSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSection.swift; sourceTree = "<group>"; };
+		E38B50322950F23500C29954 /* ShortNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortNote.swift; sourceTree = "<group>"; };
+		E38B50352950F23500C29954 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		E38B50362950F23500C29954 /* InputNoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNoteTableViewCell.swift; sourceTree = "<group>"; };
+		E38B50372950F23500C29954 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		E38B50392950F23500C29954 /* NotesModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesModuleConfigurator.swift; sourceTree = "<group>"; };
+		E38B503B2950F23500C29954 /* NotesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesRouter.swift; sourceTree = "<group>"; };
+		E38B50442950F25B00C29954 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		E38B50462950F27900C29954 /* Array+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
+		E38B50492950F32200C29954 /* WelcomeButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeButtonModel.swift; sourceTree = "<group>"; };
 		E3DE80612950B41D0016770A /* PW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DE80642950B41D0016770A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3DE80662950B41D0016770A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +67,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E38B502D2950F23500C29954 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				E38B502E2950F23500C29954 /* Presenter */,
+				E38B50302950F23500C29954 /* Model */,
+				E38B50332950F23500C29954 /* View */,
+				E38B50382950F23500C29954 /* Configurator */,
+				E38B503A2950F23500C29954 /* Router */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		E38B502E2950F23500C29954 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E38B502F2950F23500C29954 /* NotesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E38B50302950F23500C29954 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E38B50312950F23500C29954 /* NoteSection.swift */,
+				E38B50322950F23500C29954 /* ShortNote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E38B50332950F23500C29954 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E38B50342950F23500C29954 /* Cells */,
+				E38B50372950F23500C29954 /* NotesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E38B50342950F23500C29954 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E38B50352950F23500C29954 /* NoteTableViewCell.swift */,
+				E38B50362950F23500C29954 /* InputNoteTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E38B50382950F23500C29954 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E38B50392950F23500C29954 /* NotesModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E38B503A2950F23500C29954 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E38B503B2950F23500C29954 /* NotesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E38B50482950F2F900C29954 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E38B50492950F32200C29954 /* WelcomeButtonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E3DE80582950B41D0016770A = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +157,7 @@
 		E3DE80632950B41D0016770A /* PW2 */ = {
 			isa = PBXGroup;
 			children = (
+				E3DE808C2950EC300016770A /* UI */,
 				E3DE80862950EB020016770A /* Module */,
 				E3DE80832950B7F70016770A /* Extension */,
 				E3DE80642950B41D0016770A /* AppDelegate.swift */,
@@ -79,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				E3DE80842950B8470016770A /* UIView+Extension.swift */,
+				E38B50442950F25B00C29954 /* UITableView+Extension.swift */,
+				E38B50462950F27900C29954 /* Array+Safe.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -86,6 +182,7 @@
 		E3DE80862950EB020016770A /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				E38B502D2950F23500C29954 /* Notes */,
 				E3DE80872950EB080016770A /* Welcome */,
 			);
 			path = Module;
@@ -94,6 +191,7 @@
 		E3DE80872950EB080016770A /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				E38B50482950F2F900C29954 /* Model */,
 				E3DE808B2950EB260016770A /* Configurator */,
 				E3DE808A2950EB1E0016770A /* Rouner */,
 				E3DE80892950EB180016770A /* View */,
@@ -132,6 +230,21 @@
 				E3DE807E2950B6E60016770A /* WelcomeModuleConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E3DE808C2950EC300016770A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE808D2950EC3C0016770A /* ColorPaletteView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E3DE808D2950EC3C0016770A /* ColorPaletteView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ColorPaletteView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,13 +323,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38B50402950F23500C29954 /* InputNoteTableViewCell.swift in Sources */,
+				E38B503C2950F23500C29954 /* NotesPresenter.swift in Sources */,
+				E38B50422950F23500C29954 /* NotesModuleConfigurator.swift in Sources */,
 				E3DE80822950B6E60016770A /* WelcomeModuleConfigurator.swift in Sources */,
 				E3DE80852950B8470016770A /* UIView+Extension.swift in Sources */,
 				E3DE807F2950B6E60016770A /* WelcomePresenter.swift in Sources */,
+				E38B503E2950F23500C29954 /* ShortNote.swift in Sources */,
+				E38B503D2950F23500C29954 /* NoteSection.swift in Sources */,
+				E38B50412950F23500C29954 /* NotesViewController.swift in Sources */,
 				E3DE80652950B41D0016770A /* AppDelegate.swift in Sources */,
+				E38B50432950F23500C29954 /* NotesRouter.swift in Sources */,
 				E3DE80812950B6E60016770A /* WelcomeViewController.swift in Sources */,
 				E3DE80802950B6E60016770A /* WelcomeRouter.swift in Sources */,
 				E3DE80672950B41D0016770A /* SceneDelegate.swift in Sources */,
+				E38B50472950F27900C29954 /* Array+Safe.swift in Sources */,
+				E38B503F2950F23500C29954 /* NoteTableViewCell.swift in Sources */,
+				E38B504A2950F32200C29954 /* WelcomeButtonModel.swift in Sources */,
+				E38B50452950F25B00C29954 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

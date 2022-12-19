@@ -15,8 +15,8 @@ protocol WelcomeViewInput: AnyObject {
 }
 
 protocol WelcomeViewOutput: AnyObject {
-  func viewDidLoad()
   func incrementButtonPressed()
+  func stackButtonPressed(model: WelcomeButtonModel)
 }
 
 
@@ -64,23 +64,20 @@ final class WelcomeViewController: UIViewController {
 
   private lazy var buttonsStackView: UIStackView = {
 
-    func makeMenuButton(title: String) -> UIButton {
+    func makeMenuButton(model: WelcomeButtonModel) -> UIButton {
       let button = UIButton()
-      button.setTitle(title, for: .normal)
+      button.setTitle(model.title, for: .normal)
+      button.tag = model.rawValue
       button.setTitleColor(.black, for: .normal)
       button.layer.cornerRadius = 12.0
       button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .medium)
       button.backgroundColor = .white
       button.snp.makeConstraints { $0.height.equalTo(button.snp.width) }
+      button.addTarget(self, action: #selector(stackButtonPressed), for: .touchUpInside)
       return button
     }
 
-    let stack = UIStackView(arrangedSubviews: [
-      makeMenuButton(title: "🎨"),
-      makeMenuButton(title: "📝"),
-      makeMenuButton(title: "📰"),
-    ])
-
+    let stack = UIStackView(arrangedSubviews: buttons.map { makeMenuButton(model: $0) })
     stack.spacing = 12
     stack.axis = .horizontal
     stack.distribution = .fillEqually
@@ -90,19 +87,28 @@ final class WelcomeViewController: UIViewController {
   // MARK: - Properties
 
   var output: WelcomeViewOutput?
+  private let buttons: [WelcomeButtonModel] = [.palette, .notion, .news]
 
   // MARK: - UIViewController
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
-    output?.viewDidLoad()
   }
 
   // MARK: - Actions
 
   @objc private func incrementButtonPressed() {
+    let generator = UIImpactFeedbackGenerator(style: .light)
+    generator.impactOccurred()
     output?.incrementButtonPressed()
+  }
+
+  @objc private func stackButtonPressed(sender: UIButton!) {
+    let generator = UIImpactFeedbackGenerator(style: .light)
+    generator.impactOccurred()
+    guard let model = WelcomeButtonModel(rawValue: sender.tag) else { return }
+    output?.stackButtonPressed(model: model)
   }
 
   // MARK: - Setup

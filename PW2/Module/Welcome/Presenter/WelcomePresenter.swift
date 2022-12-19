@@ -51,13 +51,15 @@ final class WelcomePresenter {
 // MARK: - WelcomeViewOutput
 
 extension WelcomePresenter: WelcomeViewOutput {
-  func incrementButtonPressed() {
-    value += 1
+  func stackButtonPressed(model: WelcomeButtonModel) {
+    switch model {
+    case .palette, .news: break
+    case .notion: router?.showNoties()
+    }
   }
 
-
-  func viewDidLoad() {
-
+  func incrementButtonPressed() {
+    value += 1
   }
 }
 

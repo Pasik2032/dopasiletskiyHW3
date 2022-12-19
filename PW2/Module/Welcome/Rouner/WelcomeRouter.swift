@@ -8,7 +8,7 @@
 import UIKit
 
 protocol WelcomeRouterInput {
-
+  func showNoties()
 }
 
 final class WelcomeRouter {
@@ -21,6 +21,9 @@ final class WelcomeRouter {
 // MARK: - WelcomeRouterInput
 
 extension WelcomeRouter: WelcomeRouterInput {
-
+  func showNoties() {
+    let module = NotesModuleConfigurator().configure()
+    view?.present(module.view, animated: true)
+  }
 }
 
