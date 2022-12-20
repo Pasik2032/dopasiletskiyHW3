@@ -12,6 +12,7 @@ import SnapKit
 protocol WelcomeViewInput: AnyObject {
   func setupValueText(_ text: String)
   func setupCommentText(_ text: String)
+  func toggleColorPaletteView()
 }
 
 protocol WelcomeViewOutput: AnyObject {
@@ -56,10 +57,16 @@ final class WelcomeViewController: UIViewController {
     button.layer.cornerRadius = 12.0
     button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .medium)
     button.backgroundColor = .white
-
-        button.dropShadow()
+    button.dropShadow()
     button.addTarget(self, action: #selector(incrementButtonPressed), for: .touchUpInside)
     return button
+  }()
+
+  private lazy var colorPaletteView: ColorPaletteView = {
+    let colorPaletteView = ColorPaletteView()
+    colorPaletteView.isHidden = true
+    colorPaletteView.addTarget(self, action: #selector(changeColor), for: .touchDragInside)
+    return colorPaletteView
   }()
 
   private lazy var buttonsStackView: UIStackView = {
@@ -111,6 +118,12 @@ final class WelcomeViewController: UIViewController {
     output?.stackButtonPressed(model: model)
   }
 
+  @objc private func changeColor(_ slider: ColorPaletteView) {
+    UIView.animate(withDuration: 0.5) {
+      self.view.backgroundColor = slider.chosenColor
+    }
+  }
+
   // MARK: - Setup
 
   private func setupUI() {
@@ -121,6 +134,7 @@ final class WelcomeViewController: UIViewController {
         valueLabel,
         incrementButton,
         buttonsStackView,
+        colorPaletteView,
       ]
     )
     commentView.addSubview(commentLabel)
@@ -152,12 +166,27 @@ final class WelcomeViewController: UIViewController {
       $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(24)
     }
 
+    colorPaletteView.snp.makeConstraints {
+      $0.top.equalTo(incrementButton.snp.bottom).inset(-8)
+      $0.leading.trailing.equalToSuperview().inset(24)
+      $0.bottom.equalTo(buttonsStackView.snp.top).inset(-8)
+    }
   }
 }
 
 // MARK: - TroikaServiceViewInput
 
 extension WelcomeViewController: WelcomeViewInput {
+  func toggleColorPaletteView() {
+    UIView.transition(
+      with: colorPaletteView,
+      duration: 0.4,
+      options: .transitionCrossDissolve
+    ) { [weak self] in
+      self?.colorPaletteView.isHidden.toggle()
+    }
+  }
+
   func setupValueText(_ text: String) {
     UIView.transition(
       with: commentLabel,

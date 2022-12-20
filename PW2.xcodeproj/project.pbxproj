@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E328E95E2952268900BCC496 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328E95D2952268900BCC496 /* ColorPaletteView.swift */; };
+		E328E9602952290000BCC496 /* ColorSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328E95F2952290000BCC496 /* ColorSliderView.swift */; };
+		E328E96229522DC300BCC496 /* ColorPaletteItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328E96129522DC300BCC496 /* ColorPaletteItemModel.swift */; };
+		E328E9642952312E00BCC496 /* UIColor+RGBAComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328E9632952312E00BCC496 /* UIColor+RGBAComponents.swift */; };
 		E38B503C2950F23500C29954 /* NotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B502F2950F23500C29954 /* NotesPresenter.swift */; };
 		E38B503D2950F23500C29954 /* NoteSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50312950F23500C29954 /* NoteSection.swift */; };
 		E38B503E2950F23500C29954 /* ShortNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38B50322950F23500C29954 /* ShortNote.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E328E95D2952268900BCC496 /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
+		E328E95F2952290000BCC496 /* ColorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderView.swift; sourceTree = "<group>"; };
+		E328E96129522DC300BCC496 /* ColorPaletteItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteItemModel.swift; sourceTree = "<group>"; };
+		E328E9632952312E00BCC496 /* UIColor+RGBAComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBAComponents.swift"; sourceTree = "<group>"; };
 		E38B502F2950F23500C29954 /* NotesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesPresenter.swift; sourceTree = "<group>"; };
 		E38B50312950F23500C29954 /* NoteSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSection.swift; sourceTree = "<group>"; };
 		E38B50322950F23500C29954 /* ShortNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortNote.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 				E3DE80842950B8470016770A /* UIView+Extension.swift */,
 				E38B50442950F25B00C29954 /* UITableView+Extension.swift */,
 				E38B50462950F27900C29954 /* Array+Safe.swift */,
+				E328E9632952312E00BCC496 /* UIColor+RGBAComponents.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -243,6 +252,9 @@
 		E3DE808D2950EC3C0016770A /* ColorPaletteView */ = {
 			isa = PBXGroup;
 			children = (
+				E328E95D2952268900BCC496 /* ColorPaletteView.swift */,
+				E328E95F2952290000BCC496 /* ColorSliderView.swift */,
+				E328E96129522DC300BCC496 /* ColorPaletteItemModel.swift */,
 			);
 			path = ColorPaletteView;
 			sourceTree = "<group>";
@@ -328,12 +340,15 @@
 				E38B50422950F23500C29954 /* NotesModuleConfigurator.swift in Sources */,
 				E3DE80822950B6E60016770A /* WelcomeModuleConfigurator.swift in Sources */,
 				E3DE80852950B8470016770A /* UIView+Extension.swift in Sources */,
+				E328E9602952290000BCC496 /* ColorSliderView.swift in Sources */,
 				E3DE807F2950B6E60016770A /* WelcomePresenter.swift in Sources */,
 				E38B503E2950F23500C29954 /* ShortNote.swift in Sources */,
 				E38B503D2950F23500C29954 /* NoteSection.swift in Sources */,
 				E38B50412950F23500C29954 /* NotesViewController.swift in Sources */,
 				E3DE80652950B41D0016770A /* AppDelegate.swift in Sources */,
 				E38B50432950F23500C29954 /* NotesRouter.swift in Sources */,
+				E328E96229522DC300BCC496 /* ColorPaletteItemModel.swift in Sources */,
+				E328E9642952312E00BCC496 /* UIColor+RGBAComponents.swift in Sources */,
 				E3DE80812950B6E60016770A /* WelcomeViewController.swift in Sources */,
 				E3DE80802950B6E60016770A /* WelcomeRouter.swift in Sources */,
 				E3DE80672950B41D0016770A /* SceneDelegate.swift in Sources */,
@@ -341,6 +356,7 @@
 				E38B503F2950F23500C29954 /* NoteTableViewCell.swift in Sources */,
 				E38B504A2950F32200C29954 /* WelcomeButtonModel.swift in Sources */,
 				E38B50452950F25B00C29954 /* UITableView+Extension.swift in Sources */,
+				E328E95E2952268900BCC496 /* ColorPaletteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

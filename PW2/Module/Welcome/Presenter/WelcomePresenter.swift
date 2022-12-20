@@ -53,7 +53,8 @@ final class WelcomePresenter {
 extension WelcomePresenter: WelcomeViewOutput {
   func stackButtonPressed(model: WelcomeButtonModel) {
     switch model {
-    case .palette, .news: break
+    case .news: break
+    case .palette: view?.toggleColorPaletteView()
     case .notion: router?.showNoties()
     }
   }
